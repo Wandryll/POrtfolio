@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Últimas Experiências</h2>
+  @if (!arrayExperience()) { @for (item of arrayExperience(); track item){
+  <details>
+    <summary>
+      <p>
+        <strong>{{ item.summary.strong }}</strong>
+        {{ item.summary.p }}
+      </p>
+    </summary>
+    <article [innerHTML]="item.text"></article>
+  </details>
+  } } @else {
+  <p>Ainda estou atrás de Experiências!</p>
+  }
+</div>
